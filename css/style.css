@@ -1,7 +1,134 @@
-/* ITCS333 A2 starter — implement the design spec from index.html here.
-   See README rubric for the graded checks. Do not use inline styles. */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #f5f6f8;
+}
 
-/* TODO: style #site-header (padding, border-bottom) */
-/* TODO: style .card (padding, border, gap) and .card-grid (display, gap, 3 columns) */
-/* TODO: style form inputs (padding) and a :focus state */
-/* TODO: add a @media (max-width: 700px) query collapsing .card-grid to one column */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+#site-header {
+  padding: 16px 24px;
+  border-bottom: 3px solid #1f4e79;
+  background-color: #ffffff;
+}
+
+#site-header h1 {
+  margin: 0 0 8px;
+  color: #1f4e79;
+}
+
+.main-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.main-nav a {
+  color: #1f4e79;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.content-section {
+  margin-bottom: 32px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 8px 12px;
+  border: 1px solid #cccccc;
+  text-align: left;
+}
+
+.schedule-table th {
+  background-color: #1f4e79;
+  color: #ffffff;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background-color: #eef3f8;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card .weight {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f4e79;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+}
+
+.register-form input {
+  padding: 8px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.register-form input:focus {
+  outline: 2px solid #1f4e79;
+  border-color: #1f4e79;
+}
+
+.btn-primary {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1f4e79;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #163a5a;
+}
+
+.site-footer {
+  padding: 16px;
+  border-top: 1px solid #cccccc;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
